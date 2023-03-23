@@ -1,3 +1,3 @@
-# GitStreamDemo
+# gitStreamDemo
 
 Demonstrating some functionallity of gitStream
