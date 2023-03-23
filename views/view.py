@@ -1,6 +1,6 @@
-def run_view(name):
-    print(f'View, {name} is showing!')
+def run(name):
+    print(f'Program, {name} is running!')
 
 
 if __name__ == '__main__':
-    run_view('Demo!')
+    run('Demo!')
