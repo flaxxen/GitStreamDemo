@@ -20,20 +20,20 @@ automations:
           comment: |
             {{ repo | explainCodeExperts(gt=10) }}
 
-  label_date:
-    if: 
-      - true
+
+  label_formatting:
+    if:
+      - {{ source.diff.files | isFormattingChange }}
     run:
       - action: add-label@v1
         args:
-          label: {{ var.date }}
+          label: "Formatting :hatching_chick:
           color: {{ 'FFFF00' }}
+  
+  
 calc:
   etr: {{ branch | estimatedReviewTime }}
   
-  
-var:
-  date: {{ pr.created_at }}
   
   
   
