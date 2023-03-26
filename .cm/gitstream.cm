@@ -20,13 +20,44 @@ automations:
           comment: |
             {{ repo | explainCodeExperts(gt=10) }}
 
-  label_formatting_change:
+  label_date:
     if: 
-      - {{ source.diff.files | isFormattingChange }}
+      - true
     run:
       - action: add-label@v1
         args:
-          label: "Formatting"
-          color: {{ '00FF00' }}
+          label: {{ var.date }}
+          color: {{ 'FFFF00' }}
 calc:
   etr: {{ branch | estimatedReviewTime }}
+  
+  
+var:
+  date: {{ pr.created_at }}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
