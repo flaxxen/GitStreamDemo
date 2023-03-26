@@ -43,5 +43,5 @@ calc:
   
   
   
-  var:
-    x: ":hatching_chick:"
+var:
+  x: ":hatching_chick:"
