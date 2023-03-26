@@ -27,7 +27,7 @@ automations:
     run:
       - action: add-label@v1
         args:
-          label: "Formatting :hatching_chick:
+          label: "Formatting :hatching_chick:"
           color: {{ 'FFFF00' }}
   
   
