@@ -19,6 +19,29 @@ automations:
         args:
           comment: |
             {{ repo | explainCodeExperts(gt=10) }}
+  label_formatting:
+    if:
+      - {{ source.diff.files | isFormattingChange }}
+    run:
+      - action: add-label@v1
+        args:
+          label: "Formatting{{car.x}}"
+          color: {{'FFFF00'}}
 
 calc:
   etr: {{ branch | estimatedReviewTime }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+car:
+  x: ":hatching_chick"
